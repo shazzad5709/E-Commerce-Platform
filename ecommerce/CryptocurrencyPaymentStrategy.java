@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class CryptocurrencyPaymentStrategy implements PaymentStrategy {
     private String address;

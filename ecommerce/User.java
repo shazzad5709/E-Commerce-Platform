@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class User {
     private String name;

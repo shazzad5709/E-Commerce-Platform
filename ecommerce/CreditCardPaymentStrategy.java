@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class CreditCardPaymentStrategy implements PaymentStrategy {
     private String cardNumber;

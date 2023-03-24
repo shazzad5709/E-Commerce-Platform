@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public interface EcommerceMediator {
     public void addUser(User user);

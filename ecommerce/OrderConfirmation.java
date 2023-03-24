@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class OrderConfirmation {
     private User user;

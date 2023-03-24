@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class FiftyPercentDiscountStrategy implements DiscountStrategy{
   @Override

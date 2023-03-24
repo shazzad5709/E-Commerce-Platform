@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class PayPalPaymentStrategy implements PaymentStrategy {
     private String email;

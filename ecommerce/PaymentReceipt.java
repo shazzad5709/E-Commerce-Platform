@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public class PaymentReceipt {
     private User user;

@@ -1,4 +1,4 @@
-package ESHOP;
+package ecommerce;
 
 public abstract class ProductPurchaseTemplate {
     public void displayProduct(Product product, DiscountStrategy discountStrategy) {
