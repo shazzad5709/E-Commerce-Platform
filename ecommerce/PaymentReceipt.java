@@ -15,17 +15,24 @@ public class PaymentReceipt {
 
     public void send() {
         // Send payment receipt email to user
-        String paymentMethod = paymentStrategy instanceof CreditCardPaymentStrategy ? "Credit Card" :
-            paymentStrategy instanceof PayPalPaymentStrategy ? "PayPal" :
-            paymentStrategy instanceof CryptocurrencyPaymentStrategy ? "Cryptocurrency" : "Unknown";
+        String paymentMethod;
+        if (paymentStrategy instanceof CreditCardPaymentStrategy) {
+            paymentMethod = "Credit Card";
+        } else if (paymentStrategy instanceof PayPalPaymentStrategy) {
+            paymentMethod = "PayPal";
+        } else if (paymentStrategy instanceof CryptocurrencyPaymentStrategy) {
+            paymentMethod = "Cryptocurrency";
+        } else {
+            paymentMethod = "Unknown";
+        }
 
         // Payment receipt
-        System.out.println("\nRECEIPT");
+        System.out.println("\n\n-----Receipt-----\n");
         System.out.println("Name: " + user.getName() + ",");
         System.out.println("Product: " + product.getName());
         System.out.println("Paid: $" + amount);
         System.out.println("Payment Method: " + paymentMethod);
+        System.out.println("Payment Details: " + paymentStrategy.displayPaymentDetails());
         System.out.println();
     }
 }
-

@@ -1,6 +1,6 @@
 package ecommerce;
 
-public abstract class ProductPurchaseTemplate {
+public class ProductPurchaseTemplate {
     public void displayProduct(Product product, DiscountStrategy discountStrategy) {
         // display product information
         double discountedPrice = discountStrategy.applyDiscount(product.getPrice()); // apply 10% discount
@@ -12,7 +12,10 @@ public abstract class ProductPurchaseTemplate {
         product.setPrice(discountedPrice);
 
         System.out.println("Discount: " + discountStrategy.discount());
-        System.out.println("Discount Price: $" + discountedPrice);
+
+        if (discountStrategy instanceof CouponDiscountStrategy) 
+            System.out.println("Discount Price: $" + discountedPrice);
+            
         System.out.println("Product Image: " + product.getImage());
         System.out.println("Product Inventory: " + product.getInventory());
     }

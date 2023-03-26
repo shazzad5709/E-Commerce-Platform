@@ -14,4 +14,8 @@ public class CreditCardPaymentStrategy implements PaymentStrategy {
     public void pay(double amount) {
         System.out.println("\nProcessing CreditCard payment of $" + amount + "...");
     }
+
+    public String displayPaymentDetails() {
+        return "Credit Card\n Card Number: " + cardNumber;
+    }
 }

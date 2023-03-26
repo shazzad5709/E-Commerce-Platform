@@ -8,6 +8,6 @@ public class NoDiscountStrategy implements DiscountStrategy {
 
     @Override
     public String discount() {
-        return "Null";
+        return "None";
     }
 }

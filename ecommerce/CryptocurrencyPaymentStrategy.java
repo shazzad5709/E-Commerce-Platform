@@ -10,4 +10,8 @@ public class CryptocurrencyPaymentStrategy implements PaymentStrategy {
     public void pay(double amount) {
         System.out.println("Processing cryptocurrency payment of $" + amount + "...");
     }
+
+    public String displayPaymentDetails() {
+        return "Cryptocurrency\n Address: " + address;
+    }
 }
